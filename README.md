@@ -8,12 +8,17 @@ Demonstrates issue with darwin engine when frame size is too large.
  swift run --package-path=hello
  ```
 
-2. Open app project  by running
+2. Init gradle:
+```zsh
+cd KtorWebsocketSample && ./gradlew wrapper  && cd ../
 ```
+
+3. Open app project  by running
+```zsh
 open KtorWebsocketSample/iosApp/iosApp.xcodeproj
 ```
 
-3. Run on iOS simulator.
+4. Run on iOS simulator.
 
 
 # Problem statement
