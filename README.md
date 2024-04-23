@@ -10,7 +10,7 @@ Demonstrates issue with darwin engine when frame size is too large.
 
 2. Open app project  by running
 ```
-KtorWebsocketSample/iosApp/iosApp.xcodeproj
+open KtorWebsocketSample/iosApp/iosApp.xcodeproj
 ```
 
 3. Run on iOS simulator.
