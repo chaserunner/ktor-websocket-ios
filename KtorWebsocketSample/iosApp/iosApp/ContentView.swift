@@ -5,9 +5,13 @@ struct ContentView: View {
 	let client = TestClient()
 
 	var body: some View {
-        Button("send request") {
-            client.sendRequest { _ in
-                print("completed")
+        VStack {
+            Button("send echo request") {
+                client.sendEchoRequest { _ in  }
+            }
+
+            Button("send giant response request") {
+                client.sendGiantRequest { _ in  }
             }
         }
 	}
