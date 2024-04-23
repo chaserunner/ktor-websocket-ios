@@ -20,6 +20,8 @@ open KtorWebsocketSample/iosApp/iosApp.xcodeproj
 
 4. Run on iOS simulator.
 
+> In case of issues, try to run gradle from Android studio
+
 
 # Problem statement
 
