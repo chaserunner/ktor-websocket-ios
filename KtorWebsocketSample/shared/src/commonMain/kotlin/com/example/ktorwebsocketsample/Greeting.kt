@@ -30,9 +30,9 @@ class TestClient {
     }
     private suspend fun sendRequest(url: String) {
         session = client.webSocketSession(url) {
-            header(HttpHeaders.SecWebSocketProtocol, "protobuf")
+//            header(HttpHeaders.SecWebSocketProtocol, "protobuf")
         }
-        session?.maxFrameSize = 1048576 * 2 * 2
+        session?.maxFrameSize = 2_000_000
         with(CoroutineScope(coroutineContext)) {
             sessionHandlerJob = launch(Dispatchers.IO) {
                 session?.incoming?.consumeEach { frame ->

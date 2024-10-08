@@ -5,7 +5,7 @@ compose = "1.5.4"
 compose-compiler = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
-ktorClientCore = "2.3.9"
+ktorClientCore = "3.0.0-rc-2-eap-1106"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
