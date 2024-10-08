@@ -14,7 +14,7 @@ actual fun getPlatform(): Platform = IOSPlatform()
 actual fun getHttpClient(): HttpClient {
     return HttpClient(Darwin) {
         install(WebSockets) {
-            maxFrameSize = 1048576 * 2 * 2
+            maxFrameSize = 2_000_000_000
         }
     }
 }

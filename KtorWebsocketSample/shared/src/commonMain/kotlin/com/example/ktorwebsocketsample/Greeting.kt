@@ -1,9 +1,8 @@
 package com.example.ktorwebsocketsample
 
 import io.ktor.client.HttpClient
+import io.ktor.client.plugins.websocket.DefaultClientWebSocketSession
 import io.ktor.client.plugins.websocket.webSocketSession
-import io.ktor.client.request.header
-import io.ktor.http.HttpHeaders
 import io.ktor.websocket.Frame
 import io.ktor.websocket.WebSocketSession
 import io.ktor.websocket.readBytes
@@ -30,9 +29,8 @@ class TestClient {
     }
     private suspend fun sendRequest(url: String) {
         session = client.webSocketSession(url) {
-//            header(HttpHeaders.SecWebSocketProtocol, "protobuf")
         }
-        session?.maxFrameSize = 2_000_000
+        println("Max frame size before request: ${(this.session as DefaultClientWebSocketSession).maxFrameSize}")
         with(CoroutineScope(coroutineContext)) {
             sessionHandlerJob = launch(Dispatchers.IO) {
                 session?.incoming?.consumeEach { frame ->
